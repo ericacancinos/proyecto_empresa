@@ -498,7 +498,7 @@ p.titulo{
     color: #fff;
     text-align: center;
     font-size: 32px;
-    background: #9400d3;
+    background: #1906a2;
     margin-bottom:0;
     font-weight: 700;
     padding: 30px 0;
@@ -538,7 +538,7 @@ p.titulo{
     border-radius: 0 0 4px 4px;
 }
 .precio-boton:hover{
-    background: #9400d3;
+    background: #1906a2;
 }
 .precio-contenido p{
     background:#f8f8f8;
