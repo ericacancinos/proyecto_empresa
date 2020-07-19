@@ -560,8 +560,17 @@ p.titulo{
     color: blue;
     font-size: 25px;
 }
-.fa-remove:before{
-    
+.fa-remove:before,
+.fa-close:before,
+.fa-times{
+    content:"\f00d";
+    color: red;
+    font-size: 25px;
+}
+.fa-clock-o:before{
+    content:"\f017";
+    font-size:25px;
+    color: chartreuse;
 }
 /* ==========================================================================
    Helper classes
