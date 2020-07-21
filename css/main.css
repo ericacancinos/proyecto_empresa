@@ -563,70 +563,132 @@ p.titulo{
 .fa-remove:before,
 .fa-close:before,
 .fa-times{
-    content:"\f00d";
-    color: red;
-    font-size: 25px;
+    content   : "\f00d";
+    color     : red;
+    font-size : 25px;
 }
 .fa-clock-o:before{
-    content:"\f017";
-    font-size:25px;
-    color: chartreuse;
+    content   : "\f017";
+    font-size : 25px;
+    color     : chartreuse;
 }
 
 /**Contacto**/
 .contacto{
-    background: #c4c4c4;/*color de fondo*/
+    background: #c4c4c4;
     padding   : 50px 0;
+/*agregando color de fondo*/
 }
 @media only screen and (min-width: 768px){
-    form.reserva-contacto{/*nos permite ver en formato movil*/
+    form.reserva-contacto{
         margin: 15px 200px 15px 200px;
-    }/*200px voy a dejar de lado a lado*/
-     /*ya con esto tenemos el formulario*/
+    }
+/*nos permite ver en formato movil*/
+/*200px voy a dejar de lado a lado*/
+/*ya con esto tenemos el formulario*/
 }
 /*vamos a dar estilos al formulario*/
-form.reserva-contacto .campo{/*modificando donde van los datos*/
-    margin-bottom: 20px;/*espacio entre cada campo*/
+form.reserva-contacto .campo{
+    margin-bottom: 20px;
     width        : 100%;
+/*modificando donde van los datos*/
+/*dejamos un espacio entre cada campo de 20px*/
+
 }
 form.reserva-contacto .campo input,
 form.reserva-contacto .campo textarea{
-    width  : 100%;
-    border : 3px solid #00ffff;
-    padding: 15px 10px;/*10px a la derecha (nombre,email,etc)*/
+    width   : 100%;
+    border  : 3px solid #00ffff;
+    padding : 15px 10px;
+/*10px a la derecha (nombre,email,etc)*/
 }
 form.reserva-contacto .campo textarea{
-    height: 200px;
+    height : 200px;
 }
 form.reserva-contacto ::-webkit-input-placeholder{
     color: #000000!important;
-    /*le agregamos important para que nos quede fijo el color 
-      negro en las letras*/
-    /*para distintos navegadores*/
+/*le agregamos important para que nos quede 
+ fijo el color negro en las letras*/
+/*para distintos navegadores*/
 }
 form.reserva-contacto ::-moz-placeholder{
     color: #000000!important;
-    /*esto es para que los otros navegadores lo 
-     puedan reconocer tambien*/
-    /*este es para Mozilla*/
+/*esto es para que los otros navegadores lo 
+ puedan reconocer tambien*/
+/*este es para Mozilla*/
 }
 form.reserva-contacto ::-ms-input-placeholder{
     color: #000000!important;
-    /*este es para Internet Explore*/
+/*este es para Internet Explore*/
 }
 form.reserva-contacto input[type="submit"]{
-    border          : none;
-    margin          : 0 auto;
-    display         : block;
-    padding         :20px 25px 20px 25px;
-    text-align      : center;
-    background-color: #00ffff;
-    color           : #fff;
+    border           : none;
+    margin           : 0 auto;
+    display          : block;
+    padding          : 20px 25px 20px 25px;
+    text-align       : center;
+    background-color : #00ffff;
+    color            : #000;
 }
 form.reserva-contacto input[type="submit"]:hover{
-    background-color: #1906a2;
+    background-color : #1906a2;
+    color            : #00ffff;/*agregado*/
+    text-decoration  : line-through;/*agregado*/
 }
 
+/*Footer*/
+.footer{
+    background-color: #404040;
+/*Color de fondo*/
+}
+footer{
+    text-align: center;
+    padding: 50px 0;
+}
+footer p{
+    color:#7fffd4;
+    font-family: 'Bellefair', serif;
+    font-size: 24px;
+/*dandole estilos a Erica Cancinos*/
+}
+.menu-social{
+    margin-bottom:25px;
+}
+.redes-sociales{
+    margin-left: 0;
+    padding-left: 0;
+}
+.redes-sociales li{
+    display: inline-block;
+}
+.redes-sociales a{
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    background: #3bbec0;
+    color: #fff;
+    -webkit-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+.redes-sociales .social-facebook  a{
+    background: #3873ae;
+}
+.redes-sociales .social-twitter   a{
+    background: #62c6f8;
+}
+.redes-sociales .social-instagram a{
+    background: #ff018f;
+}
+.redes-sociales .social-youtube   a{
+    background: #ff0000;
+}
+footer .menu-social ul.redes-sociales li a{
+    margin: 0 5px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
