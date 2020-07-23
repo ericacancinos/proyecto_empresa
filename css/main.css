@@ -90,6 +90,7 @@ textarea {
       font-family: 'Lato', sans-serif;
     */
 html{
+/*agregando estilos a the box*/
      box-sizing: border-box;
 }
  *,*:before,*:after{
@@ -106,6 +107,7 @@ body{
 }
 ol,ul {
 list-style:none;
+/*none, es para que no tenga ningun circulo o de mas*/
 }
 h1,h2,h3,h4,h5,h6{
       font-family: 'Lato', sans-serif;
@@ -115,7 +117,6 @@ p{
     font-size  : 24px;
     color      : #666666;
     font-family: 'Bellefair', serif;
-   /*padding-top: 35px;/*probando*/
 }
 a{
     text-decoration : none;
@@ -124,18 +125,23 @@ a{
 }
 a:hover{
     text-decoration: line-through;
-    color: #00ffff;
+    color          : #00ffff;
+/*estilos para las palabras del menu*/
 }
-/* MENU ,agregamos estilos generales a nuestro menu*/
+
+/* MENU ,agregamos estilos generales a the box*/
 #menuToggle {
     display            : block;
     position           : fixed;
     top                : 50px;
     left               : 50px;
-    z-index            : 1;    /*significa que vamos hacerlo por capas*/
+    z-index            : 1;    
     -webkit-user-select: none; 
-    user-select        : none; /*none ,hasta que yo le indique 
-                                que lo seleccione*/
+    user-select        : none;
+/*fixed es para que nos siga en toda la pag*/             
+/*z-index vamos hacerlo por capas*/
+/*u-select quiero que me seleccione hasta que 
+ *yo le indique que lo vamos a seleccionar*/
 }
 #menuToggle input {
     display              : block;
@@ -144,12 +150,15 @@ a:hover{
     position             : absolute;
     top                  : -7;
     left                 : -5;
-    cursor               : pointer;/*cuando pase el mouse le pueda 
-                                   dar un clic*/
+    cursor               : pointer;
     opacity              : 0;
-    z-index              : 2;    /*Esta segunda capa de input se va a ver*/
+    z-index              : 2;    
     -webkit-touch-callout: none; 
+/*Pointer cuando pase el mouse le pueda dar un clic*/
+/*z-index esta segunda capa se va a ver*/
 }
+
+/*Menu Hamb.*/
 #menuToggle span {
     display         : block;
     width           : 33px;    /*largo de cada raya*/
@@ -165,28 +174,28 @@ a:hover{
                       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                       opacity 0.55s ease;
 }
-/*Menu span hambur*/
 #menuToggle span:first-child{
     transform-origin: 0% 0%;
 }
 #menuToggle span:nth-last-child(2){
     transform-origin: 0% 100%;
+/*el menu de span a la mitad ayudara tranformarla*/
 }
 #menuToggle input:checked ~ span{
     opacity   : 1;
-    transform : rotate(45deg) translate(-2px, -1px);/*con translate 
-                               vamos a ver animaciones del menu hambur*/     
+    transform : rotate(45deg) translate(-2px, -1px);     
     background: #232323;/*color para menu hambur*/               
+/*tranlate, vamos a ver animaciones en el menu hamb*/
 }
-
 #menuToggle input:checked ~ span:nth-last-child(3){
     opacity   : o;
-    transform: rotate(0deg) scale(0.2, 0.2);
+    transform : rotate(0deg) scale(0.2, 0.2);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2){
-    transform: rotate(-45deg) translate(0, -1px);
+    transform : rotate(-45deg) translate(0, -1px);
 }
+/*Menu ul*/
 #menu{
     position              : absolute;
     width                 : 300px;
@@ -201,12 +210,13 @@ a:hover{
     transition            : transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 #menu li{
-    padding  : 10px o;
-    font-size: 22px
+    padding  : 10px 0;
+    font-size: 22px;
 }
 #menuToggle input:checked ~ ul{
     transform: none;
 }
+
 /**Header**/
 div.hero{
     background-image   : url(../img/background.gif);
@@ -214,19 +224,22 @@ div.hero{
     background-position: center center;
     background-size    : cover;
     background-repeat  : no-repeat;
+/*colocamos estilos generales a la imagen que 
+ * valla al principio de la pagina*/
 }
 div.contenido-header{
     padding-top: 20px;
 }
 .logo{
-    float: left;/*insertar o no?*/
+    float      : left;
     margin-left: 50px;
-    margin-top: -30px;
-
+    margin-top : -30px;
+/*m-left, separa del menu*/
 }
 img.logotipo{
     margin-left: 50px;
 }
+
 /**texto Animado**/
 .informacion-principal{
     display    : flex;/*que sea flexible a la hora de ver la animacion*/
