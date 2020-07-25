@@ -97,7 +97,7 @@ html{
     box-sizing: inherit;
 }
 body{
-    background-color: #f2f2f2; 
+    background-color: linear-gradient(to top, #bbbbbb, #222222); 
     font-family     : 'Lato', sans-serif;
 }
 .contenedor{
@@ -242,7 +242,7 @@ img.logotipo{
 
 /**texto Animado**/
 .informacion-principal{
-    display    : flex;/*que sea flexible a la hora de ver la animacion*/
+    display    : flex;
     width      : 700px;
     height     : 40px;
     color      : #000;
@@ -254,6 +254,8 @@ img.logotipo{
     left       : 0;
     margin     : auto;
     overflow   : hidden;
+/*el display quiero que sea flexible a la hora de ver una animacion*/
+/*Ponemos todo 0 para que centre en el medio */
 }
 .informacion-principal ul{
     list-style  : none;
@@ -261,7 +263,7 @@ img.logotipo{
     animation   : cambiar 7s infinite;
     font-size   : 20px;
     font-family : 'lato', sans-serif;
-    font-weight : 700;
+    font-weight : 700;/*para que la letra sea bien oscura*/
 }
 ul,p{
     margin: 0;
@@ -270,7 +272,8 @@ p.titulo{
     font-size  : 30px;
     color      : #00ffff;
     font-family: 'lato', sans-serif;
-    font-weight: 400;/*difernete al ul asi resalta el ul*/
+    font-weight: 400;/* asi resalta los UL*/
+/*Estilo al parrafo quieres una pag web?*/
 }
 @keyframes cambiar{
     0%  {margin-top:  0;   }
@@ -282,19 +285,23 @@ p.titulo{
     85% {margin-top: -40px;}
     95% {margin-top: -40px;}
     100%{margin-top:  0;   }
+/*se empieza a mover la animacion*/
+/*UL principal (titulo)*/
 }
 @media only screen and(max-width: 768px){
-    p.titulo{
-        text-align: center;
-        font-size: 26px;
+/*Responsive el texto animado*/
+   p.titulo{
+        text-align : center;
+        font-size  : 26px;
     }
     .informacion-principal{
-        width: 450px;
+        width      : 450px;
     }
     .informacion-principal ul{
-        font-size: 17px;
+        font-size  : 17px;
     }
 }
+
 /** Grid **/
 @media only screen and (min-width:768px){
     .contenedor-grid{
@@ -325,12 +332,14 @@ p.titulo{
         width: 66.6%;
     }
 }
+
 /**Secciones**/
 .seccion-titulo{
     font-size     : 30px;
     color         : #111;
     text-transform: uppercase;
     text-align    : center;
+/*t-transform, para volverlo mayuscula*/
 }
 .seccion-descripcion{
     text-align   : center;
@@ -342,11 +351,14 @@ p.titulo{
     background   : #00ffff;
     margin       : 0 auto;
     margin-bottom: 20px;
+/*nuestra pequena linea divisor*/
 }
+
 /**Nosotros**/
 .nosotros{
-    background: #fff;
+    background: #faeed7;
     padding   : 50px 0;
+/*background, de fondo blanco*/
 }
 .nosotros img{
     width          : 75%;
@@ -371,12 +383,15 @@ p.titulo{
     }
 }
 .efecto-imagen{
-    transform: rotate(-8deg); /*si queremos rotar la imagen*/    
+    transform: rotate(-8deg);     
+/*si queremos rotar la imagen*/    
 }
+
 /**Servicios**/
 .servicios{
     background: #f2f2f2;
     padding   : 50px 0;
+/*background de fondo a gusto*/
 }
 .servicio-articulo{
     margin-bottom: 20px;
@@ -385,16 +400,17 @@ p.titulo{
     float        : left;
     background   : #00ffff;
     padding      : 16px;
-    border-radius: 50%;
+    border-radius: 50%;/*asi logramos una esfera*/
     transition   : 0.5s;
     border       : 1px solid #00ffff;
 }
 .servicio-icono i{
-    color    : #fff;
-    font-size: 24px;
+    color        : #fff;
+    font-size    : 24px;
 }
 .servicio-articulo:hover .servicio-icono{
     background: #fff;
+/*al pasar el raton que cambie a este color*/
 }
 .servicio-articulo:hover .servicio-icono i{
     color: #00ffff;
@@ -405,16 +421,19 @@ p.titulo{
     text-transform: uppercase;
 }
 .servicio-titulo a{
-    color: #000;
+    color         : #000; 
 }
 .servicio-descripcion{
-    margin-left: 80px;
-    line-height: 24px;
+    margin-left   : 80px;
+    line-height   : 24px;
 }
+
+/**Poyectos**/
 .proyectos{
-    background: #f2f2f2;
+    background: #e2e2e2;
     padding   : 50px 0;
-}    
+/*background color de fondo*/
+}
 .proyectos .portafolio-icono{
     background-position: center center;
     background-size    : cover;
@@ -425,6 +444,7 @@ p.titulo{
     display            : table;
     overflow           : hidden;
     margin-bottom      : 30px;
+/*hidden, nos va a permitir ver las imagenes*/
 }
 .proyectos .portafolio-icono .detalles{
     height        : 260px;
@@ -439,7 +459,7 @@ p.titulo{
     font-size       : 16px;
     transition      : opacity   0.3s, -webkit-transform 0.3s;
     transition      : transform 0.3s, opacity 0.3s;
-    transition      : transform 0.3s, opacity 0.3s -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
    -webkit-transform: translate3d(0, -15px, 0);
     color           : #000;
 }
@@ -449,12 +469,13 @@ p.titulo{
     font-size       : 15px;
     transition      : opacity   0.3s, -webkit-transform 0.3s;
     transition      : transform 0.3s, opacity 0.3s;
-    transition      : transform 0.3s, opacity 0.3s -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
    -webkit-transform: translate3d(0, 15px, 0);
     transform       : translate3d(0, 15px, 0);
 }
 .proyectos .portafolio-icono:hover .detalles{
     opacity: 0.8;
+/*al pasar el mouse tenga animacion y con los detalles afuera*/
 }
 .proyectos .portafolio-icono:hover .detalles h4{
     -webkit-transform: translate3d(0, 0, 0);
