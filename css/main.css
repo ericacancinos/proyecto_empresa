@@ -423,6 +423,11 @@ p.titulo{
 .servicio-titulo a{
     color         : #000; 
 }
+.servicio-articulo:hover .servicio-titulo a{
+    color: #00ffff;
+/*al pasar el mouse por el titulo cambia de color
+ * a eleccion. (agregado)*/
+}
 .servicio-descripcion{
     margin-left   : 80px;
     line-height   : 24px;
@@ -496,106 +501,110 @@ p.titulo{
     padding-right: 0;  
 }
 .precio-contenido{
-    background: #fff;
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition   : all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    position: relative;
-    border-radius: 4px;
+    background         : #fff;
+    -webkit-box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 0 7px rgba(0, 0, 0, 0.1);
+    margin-top         : 20px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    position           : relative;
+    border-radius      : 4px;
+/*transition, para sea compatible con otros navegadores*/
 }
 .precio-contenido.general{
     z-index: 99;
+/*va a ser nuestro separador*/
 }
 
 .precio-contenido:hover{
-    margin-top: -10px;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition   : all .25s ease-in-out;
-    -o-transition     : all .25s ease-in-out;
-    transition: all .25s ease-in-out;
-    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top         : -10px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    transition         : all .25s ease-in-out;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .precio-contenido h2{
-    background-color: #00ffff;
-    color: #fff;
-    font-size: 17px;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 30px 0;
-    border-radius: 4px 4px 0 0;
+    background-color : #00ffff;
+    color            : #fff;
+    font-size        : 17px;
+    text-align       : center;
+    margin-bottom    : 0;
+    padding          : 30px 0;
+    border-radius    : 4px 4px 0 0;
 }
 .precio-contenido h3{
-    color: #fff;
-    text-align: center;
-    font-size: 32px;
-    background: #1906a2;
-    margin-bottom:0;
-    font-weight: 700;
-    padding: 30px 0;
-    margin-top: 0;
+    color         : #fff;
+    text-align    : center;
+    font-size     : 32px;
+    background    : #1906a2;
+    margin-bottom : 0;
+    font-weight   : 700;
+    padding       : 30px 0;
+    margin-top    : 0;
 }
 .precio-contenido h3 span{
-    font-size: 18px;
+    font-size  : 18px;
     font-weight: 300;
 }
 .precio-contenido h3 sup{
-    font-size: 18px;
+    font-size  : 18px;
 }
 .precio-contenido ul{
-    list-style: none;
-    margin: 25px 0;
+    list-style : none;
+    margin     : 25px 0;
 }
 .precio-contenido li{
-    border-top: 1px solid #efefef;
-    width: 75%;
-    color: #333;
-    margin: 0 auto;
-    padding: 15px 0;/*15 solo arriba y cero de todos lados*/
+    border-top : 1px solid #efefef;
+    width      : 75%;
+    color      : #333;
+    margin     : 0 auto;
+    padding    : 15px 0;
+/*15 solo arriba y cero de todos lados*/
 }
 .precio-contenido li:first-child{
-    border-top: none;
+    border-top : none;
 }
 .precio-contenido li i{
-    float: right;
+    float      : right;
 }
 .precio-contenido li del{
-    color: #aaa;
+    color      : #aaa;
 }
 .precio-boton{
-    background: #00ffff;
-    text-align: center;
-    padding: 25px 0;
-    border-radius: 0 0 4px 4px;
+    background    : #00ffff;
+    text-align    : center;
+    padding       : 25px 0;
+    border-radius : 0 0 4px 4px;
 }
 .precio-boton:hover{
-    background: #1906a2;
+    background    : #1906a2;
 }
 .precio-contenido p{
-    background:#f8f8f8;
-    padding: 20px;
+    background : #f8f8f8;
+    padding    : 20px;
 }
 .precio-contenido.ofrecido{
-    margin-top: 20px;
-    position: relative;
-    z-index: 9999;
-    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top         : 20px;
+    position           : relative;
+    z-index            : 9999;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+/*W-box, para que pueda resaltar la caja*/
 }
 .precio-contenido.ofrecido h3{
-    font-size: 38px;
-    padding: 45px 0;
+    font-size : 38px;
+    padding   : 45px 0;
 }
 .fa-check:before{
-    content: "\f00c";
-    color: blue;
-    font-size: 25px;
+    content   : "\f00c";
+    color     : blue;
+    font-size : 25px;
 }
 .fa-remove:before,
-.fa-close:before,
+.fa-close :before,
 .fa-times{
     content   : "\f00d";
     color     : red;
