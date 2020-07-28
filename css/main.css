@@ -97,8 +97,8 @@ html{
     box-sizing: inherit;
 }
 body{
-    background-color: linear-gradient(to top, #bbbbbb, #222222); 
-    font-family     : 'Lato', sans-serif;
+    background : #80bd9e ; 
+    font-family: 'Lato', sans-serif;
 }
 .contenedor{
     width  : auto;
@@ -125,7 +125,7 @@ a{
 }
 a:hover{
     text-decoration: line-through;
-    color          : #00ffff;
+    color          : #ff420e;
 /*estilos para las palabras del menu*/
 }
 
@@ -202,7 +202,7 @@ a:hover{
     margin                : -100px 0 0 -50px;
     padding               : 50px;
     padding-top           : 125px;
-    background            : #ededed;
+    background            :linear-gradient(to bottom,#128277, #bdf2ed);
     list-style-type       : none;
     -webkit-font-smoothing: antialiased;
     transform-origin      : 0% 0%;
@@ -219,7 +219,8 @@ a:hover{
 
 /**Header**/
 div.hero{
-    background-image   : url(../img/background.gif);
+    background-image   : linear-gradient(to left, #06fdbd40, #c6f7eb82),
+                         url(../img/background.gif);
     height             : 100vh;
     background-position: center center;
     background-size    : cover;
@@ -235,7 +236,7 @@ div.contenido-header{
     margin-left: 50px;
     margin-top : -30px;
 /*m-left, separa del menu*/
-}
+} 
 img.logotipo{
     margin-left: 50px;
 }
@@ -270,7 +271,7 @@ ul,p{
 }
 p.titulo{
     font-size  : 30px;
-    color      : #00ffff;
+    color      : #ff420e;
     font-family: 'lato', sans-serif;
     font-weight: 400;/* asi resalta los UL*/
 /*Estilo al parrafo quieres una pag web?*/
@@ -348,7 +349,7 @@ p.titulo{
 .seccion-divisor{
     width        : 50px;
     height       : 3px;
-    background   : #00ffff;
+    background   : #ff420e;
     margin       : 0 auto;
     margin-bottom: 20px;
 /*nuestra pequena linea divisor*/
@@ -356,7 +357,7 @@ p.titulo{
 
 /**Nosotros**/
 .nosotros{
-    background: #faeed7;
+    background: linear-gradient(top right, #0db4bd, #);
     padding   : 50px 0;
 /*background, de fondo blanco*/
 }
