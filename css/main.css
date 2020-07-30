@@ -97,7 +97,8 @@ html{
     box-sizing: inherit;
 }
 body{
-    background : #80bd9e ; 
+   /* background : #ccfff2 ; */
+    background: linear-gradient(to left, #06fdbd40, #c6f7eb82);
     font-family: 'Lato', sans-serif;
 }
 .contenedor{
@@ -220,7 +221,7 @@ a:hover{
 /**Header**/
 div.hero{
     background-image   : linear-gradient(to left, #06fdbd40, #c6f7eb82),
-                         url(../img/background.gif);
+                         url(../img/this.gif);
     height             : 100vh;
     background-position: center center;
     background-size    : cover;
@@ -357,9 +358,9 @@ p.titulo{
 
 /**Nosotros**/
 .nosotros{
-    background: linear-gradient(top right, #0db4bd, #);
+ /*   background: #ccfff2;*/
     padding   : 50px 0;
-/*background, de fondo blanco*/
+/*background, de fondo claro*/
 }
 .nosotros img{
     width          : 75%;
@@ -436,7 +437,7 @@ p.titulo{
 
 /**Poyectos**/
 .proyectos{
-    background: #e2e2e2;
+ /*   background: #e2e2e2;*/
     padding   : 50px 0;
 /*background color de fondo*/
 }
