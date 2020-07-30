@@ -97,7 +97,7 @@ html{
     box-sizing: inherit;
 }
 body{
-    background-color: #f2f2f2; 
+    background-color: linear-gradient(to top, #bbbbbb, #222222); 
     font-family     : 'Lato', sans-serif;
 }
 .contenedor{
@@ -242,7 +242,7 @@ img.logotipo{
 
 /**texto Animado**/
 .informacion-principal{
-    display    : flex;/*que sea flexible a la hora de ver la animacion*/
+    display    : flex;
     width      : 700px;
     height     : 40px;
     color      : #000;
@@ -254,6 +254,8 @@ img.logotipo{
     left       : 0;
     margin     : auto;
     overflow   : hidden;
+/*el display quiero que sea flexible a la hora de ver una animacion*/
+/*Ponemos todo 0 para que centre en el medio */
 }
 .informacion-principal ul{
     list-style  : none;
@@ -261,7 +263,7 @@ img.logotipo{
     animation   : cambiar 7s infinite;
     font-size   : 20px;
     font-family : 'lato', sans-serif;
-    font-weight : 700;
+    font-weight : 700;/*para que la letra sea bien oscura*/
 }
 ul,p{
     margin: 0;
@@ -270,7 +272,8 @@ p.titulo{
     font-size  : 30px;
     color      : #00ffff;
     font-family: 'lato', sans-serif;
-    font-weight: 400;/*difernete al ul asi resalta el ul*/
+    font-weight: 400;/* asi resalta los UL*/
+/*Estilo al parrafo quieres una pag web?*/
 }
 @keyframes cambiar{
     0%  {margin-top:  0;   }
@@ -282,19 +285,23 @@ p.titulo{
     85% {margin-top: -40px;}
     95% {margin-top: -40px;}
     100%{margin-top:  0;   }
+/*se empieza a mover la animacion*/
+/*UL principal (titulo)*/
 }
 @media only screen and(max-width: 768px){
-    p.titulo{
-        text-align: center;
-        font-size: 26px;
+/*Responsive el texto animado*/
+   p.titulo{
+        text-align : center;
+        font-size  : 26px;
     }
     .informacion-principal{
-        width: 450px;
+        width      : 450px;
     }
     .informacion-principal ul{
-        font-size: 17px;
+        font-size  : 17px;
     }
 }
+
 /** Grid **/
 @media only screen and (min-width:768px){
     .contenedor-grid{
@@ -325,12 +332,14 @@ p.titulo{
         width: 66.6%;
     }
 }
+
 /**Secciones**/
 .seccion-titulo{
     font-size     : 30px;
     color         : #111;
     text-transform: uppercase;
     text-align    : center;
+/*t-transform, para volverlo mayuscula*/
 }
 .seccion-descripcion{
     text-align   : center;
@@ -342,11 +351,14 @@ p.titulo{
     background   : #00ffff;
     margin       : 0 auto;
     margin-bottom: 20px;
+/*nuestra pequena linea divisor*/
 }
+
 /**Nosotros**/
 .nosotros{
-    background: #fff;
+    background: #faeed7;
     padding   : 50px 0;
+/*background, de fondo blanco*/
 }
 .nosotros img{
     width          : 75%;
@@ -371,12 +383,15 @@ p.titulo{
     }
 }
 .efecto-imagen{
-    transform: rotate(-8deg); /*si queremos rotar la imagen*/    
+    transform: rotate(-8deg);     
+/*si queremos rotar la imagen*/    
 }
+
 /**Servicios**/
 .servicios{
     background: #f2f2f2;
     padding   : 50px 0;
+/*background de fondo a gusto*/
 }
 .servicio-articulo{
     margin-bottom: 20px;
@@ -385,16 +400,17 @@ p.titulo{
     float        : left;
     background   : #00ffff;
     padding      : 16px;
-    border-radius: 50%;
+    border-radius: 50%;/*asi logramos una esfera*/
     transition   : 0.5s;
     border       : 1px solid #00ffff;
 }
 .servicio-icono i{
-    color    : #fff;
-    font-size: 24px;
+    color        : #fff;
+    font-size    : 24px;
 }
 .servicio-articulo:hover .servicio-icono{
     background: #fff;
+/*al pasar el raton que cambie a este color*/
 }
 .servicio-articulo:hover .servicio-icono i{
     color: #00ffff;
@@ -405,16 +421,24 @@ p.titulo{
     text-transform: uppercase;
 }
 .servicio-titulo a{
-    color: #000;
+    color         : #000; 
+}
+.servicio-articulo:hover .servicio-titulo a{
+    color: #00ffff;
+/*al pasar el mouse por el titulo cambia de color
+ * a eleccion. (agregado)*/
 }
 .servicio-descripcion{
-    margin-left: 80px;
-    line-height: 24px;
+    margin-left   : 80px;
+    line-height   : 24px;
 }
+
+/**Poyectos**/
 .proyectos{
-    background: #f2f2f2;
+    background: #e2e2e2;
     padding   : 50px 0;
-}    
+/*background color de fondo*/
+}
 .proyectos .portafolio-icono{
     background-position: center center;
     background-size    : cover;
@@ -425,6 +449,7 @@ p.titulo{
     display            : table;
     overflow           : hidden;
     margin-bottom      : 30px;
+/*hidden, nos va a permitir ver las imagenes*/
 }
 .proyectos .portafolio-icono .detalles{
     height        : 260px;
@@ -439,7 +464,7 @@ p.titulo{
     font-size       : 16px;
     transition      : opacity   0.3s, -webkit-transform 0.3s;
     transition      : transform 0.3s, opacity 0.3s;
-    transition      : transform 0.3s, opacity 0.3s -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
    -webkit-transform: translate3d(0, -15px, 0);
     color           : #000;
 }
@@ -449,12 +474,13 @@ p.titulo{
     font-size       : 15px;
     transition      : opacity   0.3s, -webkit-transform 0.3s;
     transition      : transform 0.3s, opacity 0.3s;
-    transition      : transform 0.3s, opacity 0.3s -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
    -webkit-transform: translate3d(0, 15px, 0);
     transform       : translate3d(0, 15px, 0);
 }
 .proyectos .portafolio-icono:hover .detalles{
     opacity: 0.8;
+/*al pasar el mouse tenga animacion y con los detalles afuera*/
 }
 .proyectos .portafolio-icono:hover .detalles h4{
     -webkit-transform: translate3d(0, 0, 0);
@@ -475,106 +501,110 @@ p.titulo{
     padding-right: 0;  
 }
 .precio-contenido{
-    background: #fff;
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition   : all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    position: relative;
-    border-radius: 4px;
+    background         : #fff;
+    -webkit-box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 0 7px rgba(0, 0, 0, 0.1);
+    margin-top         : 20px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    position           : relative;
+    border-radius      : 4px;
+/*transition, para sea compatible con otros navegadores*/
 }
 .precio-contenido.general{
     z-index: 99;
+/*va a ser nuestro separador*/
 }
 
 .precio-contenido:hover{
-    margin-top: -10px;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition   : all .25s ease-in-out;
-    -o-transition     : all .25s ease-in-out;
-    transition: all .25s ease-in-out;
-    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top         : -10px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    transition         : all .25s ease-in-out;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .precio-contenido h2{
-    background-color: #00ffff;
-    color: #fff;
-    font-size: 17px;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 30px 0;
-    border-radius: 4px 4px 0 0;
+    background-color : #00ffff;
+    color            : #fff;
+    font-size        : 17px;
+    text-align       : center;
+    margin-bottom    : 0;
+    padding          : 30px 0;
+    border-radius    : 4px 4px 0 0;
 }
 .precio-contenido h3{
-    color: #fff;
-    text-align: center;
-    font-size: 32px;
-    background: #1906a2;
-    margin-bottom:0;
-    font-weight: 700;
-    padding: 30px 0;
-    margin-top: 0;
+    color         : #fff;
+    text-align    : center;
+    font-size     : 32px;
+    background    : #1906a2;
+    margin-bottom : 0;
+    font-weight   : 700;
+    padding       : 30px 0;
+    margin-top    : 0;
 }
 .precio-contenido h3 span{
-    font-size: 18px;
+    font-size  : 18px;
     font-weight: 300;
 }
 .precio-contenido h3 sup{
-    font-size: 18px;
+    font-size  : 18px;
 }
 .precio-contenido ul{
-    list-style: none;
-    margin: 25px 0;
+    list-style : none;
+    margin     : 25px 0;
 }
 .precio-contenido li{
-    border-top: 1px solid #efefef;
-    width: 75%;
-    color: #333;
-    margin: 0 auto;
-    padding: 15px 0;/*15 solo arriba y cero de todos lados*/
+    border-top : 1px solid #efefef;
+    width      : 75%;
+    color      : #333;
+    margin     : 0 auto;
+    padding    : 15px 0;
+/*15 solo arriba y cero de todos lados*/
 }
 .precio-contenido li:first-child{
-    border-top: none;
+    border-top : none;
 }
 .precio-contenido li i{
-    float: right;
+    float      : right;
 }
 .precio-contenido li del{
-    color: #aaa;
+    color      : #aaa;
 }
 .precio-boton{
-    background: #00ffff;
-    text-align: center;
-    padding: 25px 0;
-    border-radius: 0 0 4px 4px;
+    background    : #00ffff;
+    text-align    : center;
+    padding       : 25px 0;
+    border-radius : 0 0 4px 4px;
 }
 .precio-boton:hover{
-    background: #1906a2;
+    background    : #1906a2;
 }
 .precio-contenido p{
-    background:#f8f8f8;
-    padding: 20px;
+    background : #f8f8f8;
+    padding    : 20px;
 }
 .precio-contenido.ofrecido{
-    margin-top: 20px;
-    position: relative;
-    z-index: 9999;
-    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top         : 20px;
+    position           : relative;
+    z-index            : 9999;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+/*W-box, para que pueda resaltar la caja*/
 }
 .precio-contenido.ofrecido h3{
-    font-size: 38px;
-    padding: 45px 0;
+    font-size : 38px;
+    padding   : 45px 0;
 }
 .fa-check:before{
-    content: "\f00c";
-    color: blue;
-    font-size: 25px;
+    content   : "\f00c";
+    color     : blue;
+    font-size : 25px;
 }
 .fa-remove:before,
-.fa-close:before,
+.fa-close :before,
 .fa-times{
     content   : "\f00d";
     color     : red;
