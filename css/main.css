@@ -677,7 +677,8 @@ form.reserva-contacto input[type="submit"]{
     color            : #021c1e;
 }
 form.reserva-contacto input[type="submit"]:hover{
-    background-color : #f5552a;
+    background-color : transparent;
+    border: 4px solid #00ffff;
     color            : #00ffff;/*agregado*/
     text-decoration  : line-through;/*agregado*/
 }
