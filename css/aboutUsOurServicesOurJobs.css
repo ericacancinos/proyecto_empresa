@@ -1,0 +1,189 @@
+
+
+/** Grid **/
+@media only screen and (min-width:768px){
+    .contenedor-grid{
+        margin-bottom: 15px;
+    }
+    .contenedor-grid::after{
+        content: '';
+        display: block;
+        clear  : both;
+    }
+    [class*="columnas"] {
+        padding: 0 10px;
+        float  : left;
+    }
+    .columnas1-4{
+        width: 25%;
+    }
+    .columnas2-4{
+        width: 50%;
+    }
+    .columnas3-4{
+        width: 75%;
+    }
+    .columnas1-3{
+        width: 33.3%;
+    }
+    .columnas2-3{
+        width: 66.6%;
+    }
+}
+
+/**Secciones**/
+.seccion-titulo{
+    font-size     : 30px;
+    color         : #111;
+    text-transform: uppercase;
+    text-align    : center;
+/*t-transform, para volverlo mayuscula*/
+}
+.seccion-descripcion{
+    text-align   : center;
+    margin-bottom: 40px;
+}
+.seccion-divisor{
+    width        : 50px;
+    height       : 3px;
+    background   : #ff420e;
+    margin       : 0 auto;
+    margin-bottom: 20px;
+/*linea divisor*/
+}
+
+/**Nosotros**/
+.nosotros{
+     background: linear-gradient(to right, #5bc8ac, #ccfff2);
+    padding   : 50px 0;
+}
+.nosotros img{
+    width          : 75%;
+    background-size: cover;
+    border-radius  : 2px;
+    border         : 5px solid #e8704f;
+    margin-top     : 25px;
+}
+.imagen-nosotros{
+    text-align: center;
+    margin    : 0 auto;
+}
+.contenido-nosotros p{
+    padding: 0;
+    margin : 0 30px 0 0;
+}
+
+@media only screen and (max-width:768px){
+    .contenido-nosotros h1,
+    .contenido-nosotros p{
+        text-align: center;
+    }
+}
+.efecto-imagen{
+    transform: rotate(-8deg);     
+/*rotamos la imagen*/    
+}
+
+/**Servicios**/
+.servicios{
+    background: linear-gradient(to left, #049485, #b8fff7);
+    padding   : 50px 0;
+/*background de fondo en degrade*/
+}
+.servicio-articulo{
+    margin-bottom: 20px;
+}
+.servicio-icono{
+    float        : left;
+    background   : #ff420e;
+    padding      : 16px;
+    border-radius: 50%;/*asi logramos una esfera*/
+    transition   : 0.5s;
+    border       : 2px solid #00ffff;
+}
+.servicio-icono i{
+    color        : #fff;
+    font-size    : 24px;
+}
+.servicio-articulo:hover .servicio-icono{
+    background: #fff;
+/*al pasar el raton que cambie a este color*/
+}
+.servicio-articulo:hover .servicio-icono i{
+    color: #00ffff;
+}
+.servicio-titulo{
+    margin-left   : 80px;
+    margin-bottom : 15px;
+    text-transform: uppercase;
+}
+.servicio-titulo a{
+    color         : #000; 
+}
+.servicio-articulo:hover .servicio-titulo a{
+    color: #ff420e;
+/*al pasar el mouse por el titulo cambia de color*/
+}
+.servicio-descripcion{
+    margin-left   : 80px;
+    line-height   : 24px;
+}
+
+/**Poyectos**/
+.proyectos{
+    background: linear-gradient(to right, #037367, #62f5e5);
+    padding   : 50px 0;
+/*background color de fondo*/
+}
+.proyectos .portafolio-icono{
+    background-position: center center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    position           : relative;
+    height             : 260px;
+    width              : 100%;
+    display            : table;
+    overflow           : hidden;
+    margin-bottom      : 30px;
+/*hidden, nos va a permitir ver las imagenes*/
+}
+.proyectos .portafolio-icono .detalles{
+    height        : 260px;
+    background    : #ff420ea3;
+    display       : table-cell;
+    vertical-align: middle;
+    opacity       : 0;
+    transition    : 0.3s;
+    text-align    : center;
+}
+.proyectos .portafolio-icono .detalles h4{
+    font-size       : 16px;
+    transition      : opacity   0.3s, -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+   -webkit-transform: translate3d(0, -15px, 0);
+    color           : #00ffff;
+}
+.proyectos .portafolio-icono .detalles span{
+    display         : block;
+    color           : #00ffff;
+    font-size       : 15px;
+    transition      : opacity   0.3s, -webkit-transform 0.3s;
+    transition      : transform 0.3s, opacity 0.3s;
+    transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+   -webkit-transform: translate3d(0, 15px, 0);
+    transform       : translate3d(0, 15px, 0);
+}
+.proyectos .portafolio-icono:hover .detalles{
+    opacity: 0.8;
+/*al pasar el mouse tenga animacion */
+}
+.proyectos .portafolio-icono:hover .detalles h4{
+    -webkit-transform: translate3d(0, 0, 0);
+     transform       : translate3d(0, 0, 0);
+}
+.proyectos .portafolio-icono:hover .detalles span{
+    -webkit-transform: translate3d(0, 0, 0);
+     transform       : translate3d(0, 0, 0);
+}
+
