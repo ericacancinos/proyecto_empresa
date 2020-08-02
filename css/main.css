@@ -97,8 +97,9 @@ html{
     box-sizing: inherit;
 }
 body{
-    background-color: linear-gradient(to top, #bbbbbb, #222222); 
-    font-family     : 'Lato', sans-serif;
+   /* background : #ccfff2 ; */
+   /* background: linear-gradient(to left, #5bc8ac, #ccfff2);*/
+    font-family: 'Lato', sans-serif;
 }
 .contenedor{
     width  : auto;
@@ -115,7 +116,7 @@ h1,h2,h3,h4,h5,h6{
 }
 p{
     font-size  : 24px;
-    color      : #666666;
+    color      : #ooo;
     font-family: 'Bellefair', serif;
 }
 a{
@@ -125,7 +126,7 @@ a{
 }
 a:hover{
     text-decoration: line-through;
-    color          : #00ffff;
+    color          : #ff420e;
 /*estilos para las palabras del menu*/
 }
 
@@ -202,7 +203,7 @@ a:hover{
     margin                : -100px 0 0 -50px;
     padding               : 50px;
     padding-top           : 125px;
-    background            : #ededed;
+    background            :linear-gradient(to bottom,#128277, #bdf2ed);
     list-style-type       : none;
     -webkit-font-smoothing: antialiased;
     transform-origin      : 0% 0%;
@@ -219,7 +220,8 @@ a:hover{
 
 /**Header**/
 div.hero{
-    background-image   : url(../img/background.gif);
+    background-image   : linear-gradient(to left, #58c44982, #00fffff2),
+                         url(../img/this.gif);
     height             : 100vh;
     background-position: center center;
     background-size    : cover;
@@ -235,7 +237,7 @@ div.contenido-header{
     margin-left: 50px;
     margin-top : -30px;
 /*m-left, separa del menu*/
-}
+} 
 img.logotipo{
     margin-left: 50px;
 }
@@ -270,7 +272,7 @@ ul,p{
 }
 p.titulo{
     font-size  : 30px;
-    color      : #00ffff;
+    color      : #ff420e;
     font-family: 'lato', sans-serif;
     font-weight: 400;/* asi resalta los UL*/
 /*Estilo al parrafo quieres una pag web?*/
@@ -348,7 +350,7 @@ p.titulo{
 .seccion-divisor{
     width        : 50px;
     height       : 3px;
-    background   : #00ffff;
+    background   : #ff420e;
     margin       : 0 auto;
     margin-bottom: 20px;
 /*nuestra pequena linea divisor*/
@@ -356,15 +358,15 @@ p.titulo{
 
 /**Nosotros**/
 .nosotros{
-    background: #faeed7;
+     background: linear-gradient(to right, #5bc8ac, #ccfff2);
     padding   : 50px 0;
-/*background, de fondo blanco*/
+/*background, de fondo claro*/
 }
 .nosotros img{
     width          : 75%;
     background-size: cover;
     border-radius  : 2px;
-    border         : 5px solid #f2f2f2;
+    border         : 5px solid #e8704f;
     margin-top     : 25px;
 }
 .imagen-nosotros{
@@ -389,7 +391,7 @@ p.titulo{
 
 /**Servicios**/
 .servicios{
-    background: #f2f2f2;
+    background: linear-gradient(to left, #049485, #b8fff7);
     padding   : 50px 0;
 /*background de fondo a gusto*/
 }
@@ -398,11 +400,11 @@ p.titulo{
 }
 .servicio-icono{
     float        : left;
-    background   : #00ffff;
+    background   : #ff420e;
     padding      : 16px;
     border-radius: 50%;/*asi logramos una esfera*/
     transition   : 0.5s;
-    border       : 1px solid #00ffff;
+    border       : 2px solid #00ffff;
 }
 .servicio-icono i{
     color        : #fff;
@@ -424,7 +426,7 @@ p.titulo{
     color         : #000; 
 }
 .servicio-articulo:hover .servicio-titulo a{
-    color: #00ffff;
+    color: #ff420e;
 /*al pasar el mouse por el titulo cambia de color
  * a eleccion. (agregado)*/
 }
@@ -435,7 +437,7 @@ p.titulo{
 
 /**Poyectos**/
 .proyectos{
-    background: #e2e2e2;
+    background: linear-gradient(to right, #037367, #62f5e5);
     padding   : 50px 0;
 /*background color de fondo*/
 }
@@ -453,7 +455,7 @@ p.titulo{
 }
 .proyectos .portafolio-icono .detalles{
     height        : 260px;
-    background    : #7fffd4;
+    background    : #ff420ea3;
     display       : table-cell;
     vertical-align: middle;
     opacity       : 0;
@@ -466,11 +468,11 @@ p.titulo{
     transition      : transform 0.3s, opacity 0.3s;
     transition      : transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
    -webkit-transform: translate3d(0, -15px, 0);
-    color           : #000;
+    color           : #00ffff;
 }
 .proyectos .portafolio-icono .detalles span{
     display         : block;
-    color           : #000;
+    color           : #00ffff;
     font-size       : 15px;
     transition      : opacity   0.3s, -webkit-transform 0.3s;
     transition      : transform 0.3s, opacity 0.3s;
@@ -493,9 +495,9 @@ p.titulo{
 
 /**Precios**/
 .precio{
-    background: #e6e6e6;
+    background:linear-gradient(to left, #128277, #90ded6);
     padding   : 50px 0;
-}
+} 
 .precio-caja{
     padding-left : 0;
     padding-right: 0;  
@@ -527,19 +529,19 @@ p.titulo{
     box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .precio-contenido h2{
-    background-color : #00ffff;
+    background-color : #fa8723;
     color            : #fff;
-    font-size        : 17px;
+    font-size        : 20px;
     text-align       : center;
     margin-bottom    : 0;
     padding          : 30px 0;
     border-radius    : 4px 4px 0 0;
 }
 .precio-contenido h3{
-    color         : #fff;
+    color         : #fffafa;
     text-align    : center;
     font-size     : 32px;
-    background    : #1906a2;
+    background    :  #004d47;
     margin-bottom : 0;
     font-weight   : 700;
     padding       : 30px 0;
@@ -574,13 +576,13 @@ p.titulo{
     color      : #aaa;
 }
 .precio-boton{
-    background    : #00ffff;
+    background    : #fa8723;
     text-align    : center;
     padding       : 25px 0;
     border-radius : 0 0 4px 4px;
 }
 .precio-boton:hover{
-    background    : #1906a2;
+    background    : #004d47;
 }
 .precio-contenido p{
     background : #f8f8f8;
@@ -600,8 +602,8 @@ p.titulo{
 }
 .fa-check:before{
     content   : "\f00c";
-    color     : blue;
-    font-size : 25px;
+    color     : #00ffff;
+    font-size : 15px;
 }
 .fa-remove:before,
 .fa-close :before,
@@ -612,14 +614,15 @@ p.titulo{
 }
 .fa-clock-o:before{
     content   : "\f017";
-    font-size : 25px;
-    color     : chartreuse;
+    font-size : 20px;
+    color     : #00ffff;
 }
 
 /**Contacto**/
 .contacto{
-    background: #c4c4c4;
-    padding   : 50px 0;
+    background-image: linear-gradient(to left, #ccffc4a6, #004d47),
+                         url(../img/this.gif);
+    padding         : 50px 0;
 /*agregando color de fondo*/
 }
 @media only screen and (min-width: 768px){
@@ -671,17 +674,18 @@ form.reserva-contacto input[type="submit"]{
     padding          : 20px 25px 20px 25px;
     text-align       : center;
     background-color : #00ffff;
-    color            : #000;
+    color            : #021c1e;
 }
 form.reserva-contacto input[type="submit"]:hover{
-    background-color : #1906a2;
+    background-color : transparent;
+    border: 4px solid #00ffff;
     color            : #00ffff;/*agregado*/
     text-decoration  : line-through;/*agregado*/
 }
 
 /*Footer*/
 .footer{
-    background-color: #404040;
+    background-color: #021c1e;
 /*Color de fondo*/
 }
 footer{
