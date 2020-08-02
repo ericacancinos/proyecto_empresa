@@ -1,0 +1,239 @@
+
+/**Precios**/
+.precio{
+    background:linear-gradient(to left, #128277, #90ded6);
+    padding   : 50px 0;
+} 
+.precio-caja{
+    padding-left : 0;
+    padding-right: 0;  
+}
+.precio-contenido{
+    background         : #fff;
+    -webkit-box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 0 7px rgba(0, 0, 0, 0.1);
+    margin-top         : 20px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    position           : relative;
+    border-radius      : 4px;
+/*transition, para que sea compatible con otros navegadores*/
+}
+.precio-contenido.general{
+    z-index: 99;
+/*va a ser nuestro separador*/
+}
+
+.precio-contenido:hover{
+    margin-top         : -10px;
+    -webkit-transition : all .25s ease-in-out;
+    -moz-transition    : all .25s ease-in-out;
+    -o-transition      : all .25s ease-in-out;
+    transition         : all .25s ease-in-out;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.precio-contenido h2{
+    background-color : #fa8723;
+    color            : #fff;
+    font-size        : 20px;
+    text-align       : center;
+    margin-bottom    : 0;
+    padding          : 30px 0;
+    border-radius    : 4px 4px 0 0;
+}
+.precio-contenido h3{
+    color         : #fffafa;
+    text-align    : center;
+    font-size     : 32px;
+    background    :  #004d47;
+    margin-bottom : 0;
+    font-weight   : 700;
+    padding       : 30px 0;
+    margin-top    : 0;
+}
+.precio-contenido h3 span{
+    font-size  : 18px;
+    font-weight: 300;
+}
+.precio-contenido h3 sup{
+    font-size  : 18px;
+}
+.precio-contenido ul{
+    list-style : none;
+    margin     : 25px 0;
+}
+.precio-contenido li{
+    border-top : 1px solid #efefef;
+    width      : 75%;
+    color      : #333;
+    margin     : 0 auto;
+    padding    : 15px 0;
+}
+.precio-contenido li:first-child{
+    border-top : none;
+}
+.precio-contenido li i{
+    float      : right;
+}
+.precio-contenido li del{
+    color      : #aaa;
+}
+.precio-boton{
+    background    : #fa8723;
+    text-align    : center;
+    padding       : 25px 0;
+    border-radius : 0 0 4px 4px;
+}
+.precio-boton:hover{
+    background    : #004d47;
+}
+.precio-contenido p{
+    background : #f8f8f8;
+    padding    : 20px;
+}
+.precio-contenido.ofrecido{
+    margin-top         : 20px;
+    position           : relative;
+    z-index            : 9999;
+    -webkit-box-shadow : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow         : 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+/*W-box, para que pueda resaltar la caja*/
+}
+.precio-contenido.ofrecido h3{
+    font-size : 38px;
+    padding   : 45px 0;
+}
+.fa-check:before{
+    content   : "\f00c";
+    color     : #00ffff;
+    font-size : 15px;
+}
+.fa-remove:before,
+.fa-close :before,
+.fa-times{
+    content   : "\f00d";
+    color     : red;
+    font-size : 25px;
+}
+.fa-clock-o:before{
+    content   : "\f017";
+    font-size : 20px;
+    color     : #00ffff;
+}
+
+/**Contacto**/
+.contacto{
+    background-image: linear-gradient(to left, #ccffc4a6, #004d47),
+                         url(../img/this.gif);
+    padding         : 50px 0;
+/*agregando color de fondo*/
+}
+@media only screen and (min-width: 768px){
+    form.reserva-contacto{
+        margin: 15px 200px 15px 200px;
+    }
+/*nos permite ver en formato movil*/
+/*ya con esto tenemos el formulario*/
+}
+/*vamos a dar estilos al formulario*/
+form.reserva-contacto .campo{
+    margin-bottom: 20px;
+    width        : 100%;
+/*modificando donde van los datos*/
+/*dejamos un espacio entre cada campo de 20px*/
+
+}
+form.reserva-contacto .campo input,
+form.reserva-contacto .campo textarea{
+    width   : 100%;
+    border  : 3px solid #00ffff;
+    padding : 15px 10px;
+}
+form.reserva-contacto .campo textarea{
+    height : 200px;
+}
+form.reserva-contacto ::-webkit-input-placeholder{
+    color: #000000!important;
+/*le agregamos important para que nos quede 
+ fijo el color negro en las letras*/
+/*para distintos navegadores*/
+}
+form.reserva-contacto ::-moz-placeholder{
+    color: #000000!important;
+/*esto es para que los otros navegadores lo 
+ puedan reconocer tambien*/
+/*este es para Mozilla*/
+}
+form.reserva-contacto ::-ms-input-placeholder{
+    color: #000000!important;
+/*este es para Internet Explore*/
+}
+form.reserva-contacto input[type="submit"]{
+    border           : none;
+    margin           : 0 auto;
+    display          : block;
+    padding          : 20px 25px 20px 25px;
+    text-align       : center;
+    background-color : #00ffff;
+    color            : #021c1e;
+}
+form.reserva-contacto input[type="submit"]:hover{
+    background-color : transparent;
+    border: 4px solid #00ffff;
+    color            : #00ffff;
+    text-decoration  : line-through;
+}
+
+/*Footer*/
+.footer{
+    background-color: #021c1e;
+}
+footer{
+    text-align: center;
+    padding: 50px 0;
+}
+footer p{
+    color:#7fffd4;
+    font-family: 'Bellefair', serif;
+    font-size: 24px;
+}
+.menu-social{
+    margin-bottom:25px;
+}
+.redes-sociales{
+    margin-left: 0;
+    padding-left: 0;
+}
+.redes-sociales li{
+    display: inline-block;
+}
+.redes-sociales a{
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    background: #3bbec0;
+    color: #fff;
+    -webkit-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+.redes-sociales .social-facebook  a{
+    background: #3873ae;
+}
+.redes-sociales .social-twitter   a{
+    background: #62c6f8;
+}
+.redes-sociales .social-instagram a{
+    background: #ff018f;
+}
+.redes-sociales .social-youtube   a{
+    background: #ff0000;
+}
+footer .menu-social ul.redes-sociales li a{
+    margin: 0 5px;
+}
